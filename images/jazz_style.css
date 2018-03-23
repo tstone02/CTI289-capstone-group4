@@ -1,0 +1,389 @@
+    /*CSS Reset*/
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+	 v2.0 | 20110126
+	 License: none (public domain)
+  */
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center, p, 
+  dl, dt, dd, ol, ul, li,fieldset,
+  form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: middle;
+	text-align: left;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+	  display: block;
+  }
+  body {
+	  line-height: 1;
+  }
+  ol, ul {
+	  list-style: none;
+  }
+  blockquote, q {
+	  quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+	  content: '';
+	  content: none;
+  }
+ table {
+        border: 0;  
+       border-collapse: collapse;
+	border-spacing: 0;
+  } 
+  /*CSS Reset*/
+   
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(social_valid.png);}
+
+.cssValidator2 {width:110px; height:41px; background-position: -110px -34px}
+.facebook {width:34px; height:34px; background-position: -170px -0px}
+.facebook-gray {width:34px; height:34px; background-position: -136px -0px}
+.htmlValidator2 {width:110px; height:41px; background-position: -0px -34px}
+.instagram {width:34px; height:34px; background-position: -34px -0px}
+.instagram-gray {width:34px; height:34px; background-position: -68px -0px}
+.twitter {width:34px; height:34px; background-position: -102px -0px}
+.twitter-gray {width:34px; height:34px; background-position: -0px -0px}
+
+
+ /* Fonts */
+
+/****************************Sans Serif Fonts **********************************************/
+
+
+@font-face {
+	font-family: falla;
+	font-style: normal;
+  font-weight: 400;
+  src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v4/rxxXUYj4oZ6Q5oDJFtEd6vk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+ 
+}
+@font-face {
+	font-family: open;
+	font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v11/gk5FxslNkTTHtojXrkp-xBEur64QvLD-0IbiAdTUNXE.woff2) format('woff2');
+  
+}
+@font-face {
+	font-family: oswald;
+	font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v14/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+  
+}
+
+
+/* *************************Cursive Fonts *********************************************************** */
+
+@font-face {
+	font-family: boogie;
+	font-style: normal;
+	font-weight: 400;
+	src: local('Boogaloo Regular'), local('Boogaloo-Regular'), url(https://fonts.gstatic.com/s/boogaloo/v7/selWIQWiQA98uHaoODndYvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+	
+}
+
+@font-face {
+	font-family: trade;
+	font-style: normal;
+	font-weight: 400;
+	src: local('Trade Winds'), local('TradeWinds'), url(https://fonts.gstatic.com/s/tradewinds/v5/P7L1H4TWVDNJivDGg_--QI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+	
+}
+@font-face {
+	font-family: allan;
+	font-style: normal;
+  font-weight: 400;
+  src: local('Allan Regular'), local('Allan-Regular'), url(https://fonts.gstatic.com/s/allan/v8/IDtEQy3AyHFszsVmLG7PSg.woff2) format('woff2');
+  
+}
+@font-face {
+	font-family: bang;
+	font-style: normal;
+  font-weight: 400;
+  src: local('Bangers Regular'), local('Bangers-Regular'), url(https://fonts.gstatic.com/s/bangers/v9/yJQgrSMUoqRj-0SbnQsv4g.woff2) format('woff2');
+ 
+}
+@font-face {
+	font-family: marker;
+	 font-style: normal;
+  font-weight: 400;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v6/9vYsg5VgPHKK8SXYbf3sMsW72xVeg1938eUHStY_AJ4.woff2) format('woff2');
+  
+}
+
+
+/* **************************************************************************** */
+
+/* For the smaller screens (mobile) */
+
+/* **************************************************************************** */
+body {
+	
+}
+* .div {
+	width: 100%;
+}
+
+/* **************************************************************************** */
+
+/* For the larger screens (desktop) */
+
+/* **************************************************************************** */
+
+@media screen and (min-width: 480px) {
+	
+/* ******** Main section ****************************************************** */
+	
+* {
+box-sizing: border-box;
+/* border: 1px dotted red !important; */
+}
+
+/* Rows */
+
+.row::after {
+        content: "";
+        clear: both;
+        display: table;
+}
+
+.row {
+        display: flex;    
+        align-items: center;
+        padding: 20px 0;
+}
+
+.row div {
+        flex: 1;
+        text-align: center;
+}
+
+.container {
+        width: 1600px;
+        height: auto;
+        margin: auto;
+        background-image: url(../images/colorfulMusic.jpg)
+}
+.spacing {
+        padding-top: 20px;
+}
+img {
+        display: block;
+        height: auto;
+        margin: auto;
+}
+	
+	
+	
+
+	
+/* ******** Seating section *************************************************** */	
+
+.fifteen {
+    max-width: 15%;
+}
+.forty-five {
+    max-width: 45%
+}
+.stage {
+    border: 5px solid #1c0d2a;
+    border-radius: 10px;
+}
+.sections {
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #000;
+}
+.sections li {
+    width: 75%;
+    height: 124px;
+    margin: auto;
+    font-size: 1.5rem;
+    font-family: boogie;
+    padding: 5px;
+    text-indent: 20px;
+    padding-bottom: 5px;
+}
+.sections li li {
+    height: 36px;
+}
+.sections li li span {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-shadow: none;
+    color: #000;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 32.5px;
+    padding: 10px;
+    
+    text-shadow: none;
+}
+.bottom-center {
+    position: absolute;
+    bottom: 8px;
+    left: 105px;
+    padding: 10px;
+    text-shadow: none;
+}
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 30px;
+    padding: 10px;    
+    text-shadow: none;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 27px;
+    padding: 10px;   
+    text-shadow: none;
+}
+.top-center {
+    position: absolute;
+    top: 8px;
+    left: 102px;
+    padding: 10px;
+    text-shadow: none;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 27.5px;
+    padding: 10px;   
+    text-shadow: none;
+}
+
+
+.centered h1 {
+    font-size: 2rem;
+    font-family: boogie;
+    padding: 5px;
+
+}
+.a-section {
+        background-color: rgba(8, 211, 244, .75);
+        border: 2px solid #fff;
+        border-radius: 5px;
+}
+.b-section {
+        background-color: rgba(169, 177, 40, .75);
+        border: 2px solid #fff;
+        border-radius: 5px;
+}
+.c-section {
+        background-color: rgba(251, 179, 17, .75);
+        border: 2px solid #fff;
+        border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+/* ******** Reservation section ************************************************ */
+legend {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding-left: 10px;
+}
+#reservation {
+        background-color: rgba(129, 77, 178, 0.75);
+}
+#reservation td{
+
+        color: white;
+        width: 300px;
+        /*border: 2px solid #fff; */
+        padding: 7px 5px;
+}
+.two-hundred td{
+        width: 150px;
+}
+label {
+    padding-left: 10px;
+}
+
+.buttons {
+        margin-left: 50px;
+        padding: 12.5px 10px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: #fbb311;
+        font-family: oswald;
+        font-size: 1.125rem;
+        color: purple;
+        text-shadow: 1px 1px #fff;
+}
+
+
+
+
+
+
+
+/* ******** Footer section ****************************************************** */
+
+.cell h1, h2, h3, h4{
+        color: white;
+        font-family: falla;
+        text-align: center;
+}
+.cell a {
+        color: white;
+        text-decoration: none;
+}
+.spacing-bottom {
+        padding-bottom: 20px;
+}
+.cell a.space-left {
+        padding-left: 15px;
+}
+.cell a.space-right {
+        padding-right: 15px;
+}
+
+} /*end of media query for larger screens*/
+
+
