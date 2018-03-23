@@ -1,0 +1,22 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:f561deab2159ab47b299235df67d6217:4ecba78961ba0a989f7e2d6c35452541:9fa3afff5cd1db5011e02537310ba9dd$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(social_valid.png);}
+
+.cssValidator2 {width:110px; height:41px; background-position: -110px -34px}
+.facebook {width:34px; height:34px; background-position: -170px -0px}
+.facebook-gray {width:34px; height:34px; background-position: -136px -0px}
+.htmlValidator2 {width:110px; height:41px; background-position: -0px -34px}
+.instagram {width:34px; height:34px; background-position: -34px -0px}
+.instagram-gray {width:34px; height:34px; background-position: -68px -0px}
+.twitter {width:34px; height:34px; background-position: -102px -0px}
+.twitter-gray {width:34px; height:34px; background-position: -0px -0px}

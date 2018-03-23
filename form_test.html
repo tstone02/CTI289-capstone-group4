@@ -1,0 +1,193 @@
+
+
+
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<title>Form test</title>
+		
+		<!-- <link rel="stylesheet" href="styles/jazz_style.css" type="text/css"> -->
+		
+		</head>
+		
+		<body>
+			<form action="" method="post" name="reservation" id="reservation">
+
+				<div class="row">
+					<div class="">
+						<fieldset>
+							<legend>Customer Information</legend>
+								<table>
+									<tr>
+										<td>
+											<label for="first-name">First Name:</label>
+										</td>
+										<td>
+											<input type="text" name="customerFirstName" id="first-name" placeholder="Enter your first name">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="last-name">Last Name:</label>
+										</td>
+										<td>
+											<input type="text" name="customerLastName" id="last-name" placeholder="Enter your last name">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="street-address">Street Address:</label>
+										</td>
+										<td>
+											<input type="text" name="address" id="street-address" placeholder="Enter your street address">
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											<label for="city">City:</label>
+										</td>
+										<td>
+											<input type="text" name="city" id="city" placeholder="City">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="state">State:</label>
+										</td>
+										<td>
+											<input type="text" name="state" id="state" placeholder="State">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="zip">ZIP Code:</label>
+										</td>
+										<td>
+											<input type="text" name="zip" id="zip" placeholder="ZIP Code">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="phone">Telephone:</label>
+										</td>
+										<td>
+											<input type="tel" name="phoneNumber" id="phone" placeholder="Telephone Number">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="cust-email">Email Address:</label>
+										</td>
+										<td>
+											<input type="email" name="emailAddress" id="cust-email" placeholder="Email Address">
+										</td>
+									</tr>
+									
+								</table>
+						</fieldset>
+					</div>
+					<div class="">
+						<fieldset>
+							<legend>Purchase & Delivery Information</legend>
+								<table>
+								<tr>
+									<td>
+									<p>How will you be purchasing?</p>
+									</td>
+									<td>
+									</td>
+								</tr>
+									<tr>
+										<td>
+											
+											At the Box Office) <br>
+											Online<br>
+	
+											
+										</td>
+										<td>
+											<input type="radio" name="onlinePurchase" id="" value="In-Person"> Box Office<br>
+											<input type="radio" name="onlinePurchase" id="" value="Online" checked> Online <br>
+											
+									</tr>
+									<tr>
+									<td>
+									<p>Online Purchases can be mailed or <br>
+									you can print the tickets yourself</p>
+									</td>
+									<td>
+										<p>
+										A delivery fee of $5.95 will be added for mailing tickets</p>
+									</td>
+								</tr>
+									<tr>
+										<td>
+											
+											Do you want to print your own tickets?<br>
+											Do you want your tickets mailed to you?<br>
+											Will you pick up at Box Office?
+											
+										</td>
+										<td>
+											<input type="radio" name="shipped" id="" value="print"> I will print <br>
+											<input type="radio" name="shipped" id="" value="mail" checked> Please mail <br>
+											<input type="radio" name="shipped" id="" value="atBoxOffice" checked> I will pick up at the box office.
+											
+										</td>
+									</tr>
+								</table>
+						</fieldset>
+					</div>
+				</div>
+				<fieldset>
+					<legend>Ticket Information</legend>
+						<table>
+							<tr>
+								<td>
+									
+									How Many Tickets Do You Want?
+									
+								</td>
+								<td>
+									<input type="number" name="seatsReserved" id="seatsReserved" >
+									
+								</td>
+							</tr>
+							<tr>
+							<td>
+							What Section do you want to sit in?
+							</td>
+							<td>
+								<select>
+									<option name="sectionID" value="1">One</option>
+									<option name="sectionID" value="2">Two</option>
+									<option name="sectionID" value="3">Three</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							What Row do you want to sit in?
+							</td>
+							<td>
+								<select>
+									<option name="rowID" value="1">A</option>
+									<option name="rowID" value="2">B</option>
+									<option name="rowID" value="3">C</option>
+								</select>
+							</td>
+						</tr>
+							
+						</table>
+				</fieldset>
+				<div class="buttons">
+					<button>Review Your Order</button>
+					<input type="submit" name="submit" id="submit" value="Submit">
+					<input type="reset" name="reset" id="reset" value="Reset">
+				</div>
+
+			</form>
+		</body>
+	</html>

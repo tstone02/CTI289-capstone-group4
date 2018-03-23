@@ -1,0 +1,11 @@
+Blue: #08d3f4	rgba(8, 211, 244, 1)
+
+Green: #a9b128	rgba(169, 177, 40, 1)
+
+Orange: #fbb311	rgba(251, 179, 17, 1)
+
+Purple: #814db2	rgba(129, 77, 178, 1)
+
+Red: #e12073	rgba(225, 32, 115, 1)
+
+Black: #1c0d2a	rgba(28, 13, 42, 1)
