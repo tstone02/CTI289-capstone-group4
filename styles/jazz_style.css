@@ -1,56 +1,56 @@
-    /*CSS Reset*/
-  /* http://meyerweb.com/eric/tools/css/reset/ 
-	 v2.0 | 20110126
-	 License: none (public domain)
-  */
-  
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center, p, 
-  dl, dt, dd, ol, ul, li,fieldset,
-  form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed, 
-  figure, figcaption, footer, header, hgroup, 
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: middle;
-	text-align: left;
-  }
-  /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure, 
-  footer, header, hgroup, menu, nav, section {
-	  display: block;
-  }
-  body {
-	  line-height: 1;
-  }
-  ol, ul {
-	  list-style: none;
-  }
-  blockquote, q {
-	  quotes: none;
-  }
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-	  content: '';
-	  content: none;
-  }
- table {
-        border: 0;  
-       border-collapse: collapse;
-	border-spacing: 0;
-  } 
-  /*CSS Reset*/
-   
+/*CSS Reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, p, 
+dl, dt, dd, ol, ul, li,fieldset,
+form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    text-align: left;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border: 0;  
+    border-collapse: collapse;
+    border-spacing: 0;
+} 
+/*CSS Reset*/
+
 .sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(social_valid.png);}
 
 .cssValidator2 {width:110px; height:41px; background-position: -110px -34px}
@@ -63,71 +63,71 @@
 .twitter-gray {width:34px; height:34px; background-position: -0px -0px}
 
 
- /* Fonts */
+/* Fonts */
 
 /****************************Sans Serif Fonts **********************************************/
 
 
 @font-face {
-	font-family: falla;
-	font-style: normal;
-  font-weight: 400;
-  src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v4/rxxXUYj4oZ6Q5oDJFtEd6vk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
- 
+    font-family: falla;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v4/rxxXUYj4oZ6Q5oDJFtEd6vk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+
 }
 @font-face {
-	font-family: open;
-	font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v11/gk5FxslNkTTHtojXrkp-xBEur64QvLD-0IbiAdTUNXE.woff2) format('woff2');
-  
+    font-family: open;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v11/gk5FxslNkTTHtojXrkp-xBEur64QvLD-0IbiAdTUNXE.woff2) format('woff2');
+
 }
 @font-face {
-	font-family: oswald;
-	font-style: normal;
-  font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v14/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
-  
+    font-family: oswald;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v14/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+
 }
 
 
 /* *************************Cursive Fonts *********************************************************** */
 
 @font-face {
-	font-family: boogie;
-	font-style: normal;
-	font-weight: 400;
-	src: local('Boogaloo Regular'), local('Boogaloo-Regular'), url(https://fonts.gstatic.com/s/boogaloo/v7/selWIQWiQA98uHaoODndYvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-	
+    font-family: boogie;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Boogaloo Regular'), local('Boogaloo-Regular'), url(https://fonts.gstatic.com/s/boogaloo/v7/selWIQWiQA98uHaoODndYvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+
 }
 
 @font-face {
-	font-family: trade;
-	font-style: normal;
-	font-weight: 400;
-	src: local('Trade Winds'), local('TradeWinds'), url(https://fonts.gstatic.com/s/tradewinds/v5/P7L1H4TWVDNJivDGg_--QI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
-	
+    font-family: trade;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Trade Winds'), local('TradeWinds'), url(https://fonts.gstatic.com/s/tradewinds/v5/P7L1H4TWVDNJivDGg_--QI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+
 }
 @font-face {
-	font-family: allan;
-	font-style: normal;
-  font-weight: 400;
-  src: local('Allan Regular'), local('Allan-Regular'), url(https://fonts.gstatic.com/s/allan/v8/IDtEQy3AyHFszsVmLG7PSg.woff2) format('woff2');
-  
+    font-family: allan;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Allan Regular'), local('Allan-Regular'), url(https://fonts.gstatic.com/s/allan/v8/IDtEQy3AyHFszsVmLG7PSg.woff2) format('woff2');
+
 }
 @font-face {
-	font-family: bang;
-	font-style: normal;
-  font-weight: 400;
-  src: local('Bangers Regular'), local('Bangers-Regular'), url(https://fonts.gstatic.com/s/bangers/v9/yJQgrSMUoqRj-0SbnQsv4g.woff2) format('woff2');
- 
+    font-family: bang;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bangers Regular'), local('Bangers-Regular'), url(https://fonts.gstatic.com/s/bangers/v9/yJQgrSMUoqRj-0SbnQsv4g.woff2) format('woff2');
+
 }
 @font-face {
-	font-family: marker;
-	 font-style: normal;
-  font-weight: 400;
-  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v6/9vYsg5VgPHKK8SXYbf3sMsW72xVeg1938eUHStY_AJ4.woff2) format('woff2');
-  
+    font-family: marker;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v6/9vYsg5VgPHKK8SXYbf3sMsW72xVeg1938eUHStY_AJ4.woff2) format('woff2');
+
 }
 
 
@@ -137,10 +137,10 @@
 
 /* **************************************************************************** */
 body {
-	
+    
 }
 * .div {
-	width: 100%;
+    width: 100%;
 }
 
 /* **************************************************************************** */
@@ -150,168 +150,227 @@ body {
 /* **************************************************************************** */
 
 @media screen and (min-width: 480px) {
-	
-/* ******** Main section ****************************************************** */
-	
-* {
-box-sizing: border-box;
-/* border: 1px dotted red !important; */
-}
 
-/* Rows */
+    /* ******** Main section ****************************************************** */
 
-.row::after {
+    * {
+        box-sizing: border-box;
+        /* border: 1px dotted red !important; */
+    }
+
+    /* Rows */
+
+    .row::after {
         content: "";
         clear: both;
         display: table;
-}
+    }
 
-.row {
+    .row {
         display: flex;    
         align-items: center;
         padding: 20px 0;
-}
+    }
 
-.row div {
+    .row div {
         flex: 1;
         text-align: center;
-}
+        color: #fff;
+    }
 
-.container {
+    .container {
         width: 1600px;
         height: auto;
         margin: auto;
+        
         background-image: url(../images/colorfulMusic.jpg)
-}
-.spacing {
+    }
+    .spacing {
         padding-top: 20px;
-}
-img {
+    }
+    img {
         display: block;
         height: auto;
         margin: auto;
-}
-	
-	
-	
+    }
+    .l-pad {
+        padding-left: 10px;
+    }
+    dt, dd {
+        font-family: falla;
+        margin-left: 25px;
+        
+    }
+    dt {
+        font-size: 1.25rem;
+        padding: 10px 0;
+    }
+    dd {
+        text-indent: 25px;
+        font-style: italic;
+        padding-bottom: 3px;
+    }
+    .instructions {
+         background-color: rgba(0  , 0, 0, 0.6);
+    }
+    .instructions h1 {
+        font-family: boogie;
+        font-size: 1.75rem;
+        padding-bottom: 10px;
+    }
 
-	
-/* ******** Seating section *************************************************** */	
+    .center-title {
+        text-align: center;
+        font-family: boogie;
+        font-size: 3rem;
+        color: #fff;
+        padding-bottom: 10px;
+        text-shadow: 1px 1px #fbb311;
+    }
+    .nav-links {
+        margin-bottom: 150px;
+    }
+    .nav-links li{
+        text-align: center;
+        padding-bottom: 25px;
+        
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        font-family: falla;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+    .nav-links a:hover {
+        background-color: #814db2;
+        text-shadow: 1px 1px #fbb311;
+    }
 
-.fifteen {
-    max-width: 15%;
-}
-.forty-five {
-    max-width: 45%
-}
-.stage {
-    border: 5px solid #1c0d2a;
-    border-radius: 10px;
-}
-.sections {
-    position: relative;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px #000;
-}
-.sections li {
-    width: 75%;
-    height: 124px;
-    margin: auto;
-    font-size: 1.5rem;
-    font-family: boogie;
-    padding: 5px;
-    text-indent: 20px;
-    padding-bottom: 5px;
-}
-.sections li li {
-    height: 36px;
-}
-.sections li li span {
-    font-size: 1.75rem;
-    font-weight: bold;
-    text-shadow: none;
-    color: #000;
-}
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 32.5px;
-    padding: 10px;
+
+    /* ******** Seating section *************************************************** */	
+
+    .fifteen {
+        max-width: 15%;
+    }
+    .forty-five {
+        max-width: 45%
+    }
+    .stage {
+        border: 5px solid #1c0d2a;
+        border-radius: 10px;
+    }
+    .sections {
+        position: relative;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px #000;
+    }
     
-    text-shadow: none;
-}
-.bottom-center {
-    position: absolute;
-    bottom: 8px;
-    left: 105px;
-    padding: 10px;
-    text-shadow: none;
-}
-/* Bottom right text */
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 30px;
-    padding: 10px;    
-    text-shadow: none;
-}
+    .sections .display {
+        width: 75%;
+        height: 135px;
+        margin: auto;
+        font-size: 1.25rem;
+        font-family: boogie;
+        padding: 5px;
+        text-indent: 20px;
+       
+    }   
+    .sections li {
+        height: 30px;
+    }
+    
+    .sections li span {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-shadow: none;
+        color: #000;
+    }
+    .big-display {
+        font-size: 1.5rem;
+        
+    }
 
-/* Top left text */
-.top-left {
-    position: absolute;
-    top: 8px;
-    left: 27px;
-    padding: 10px;   
-    text-shadow: none;
-}
-.top-center {
-    position: absolute;
-    top: 8px;
-    left: 102px;
-    padding: 10px;
-    text-shadow: none;
-}
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 32.5px;
+        padding: 10px;
 
-/* Top right text */
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 27.5px;
-    padding: 10px;   
-    text-shadow: none;
-}
+        text-shadow: none;
+    }
+    .bottom-center {
+        position: absolute;
+        bottom: 8px;
+        left: 105px;
+        padding: 10px;
+        text-shadow: none;
+    }
+    /* Bottom right text */
+    .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 30px;
+        padding: 10px;    
+        text-shadow: none;
+    }
+
+    /* Top left text */
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 27px;
+        padding: 10px;   
+        text-shadow: none;
+    }
+    .top-center {
+        position: absolute;
+        top: 8px;
+        left: 102px;
+        padding: 10px;
+        text-shadow: none;
+    }
+
+    /* Top right text */
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 27.5px;
+        padding: 10px;   
+        text-shadow: none;
+    }
 
 
-.centered h1 {
-    font-size: 2rem;
-    font-family: boogie;
-    padding: 5px;
+    .centered h1 {
+        font-size: 2rem;
+        font-family: boogie;
+        padding: 5px;
 
-}
-.a-section {
+    }
+    .a-section {
         background-color: rgba(8, 211, 244, .75);
         border: 2px solid #fff;
         border-radius: 5px;
-}
-.b-section {
+    }
+    .b-section {
         background-color: rgba(169, 177, 40, .75);
         border: 2px solid #fff;
         border-radius: 5px;
-}
-.c-section {
+    }
+    .c-section {
         background-color: rgba(251, 179, 17, .75);
         border: 2px solid #fff;
         border-radius: 5px;
 
-}
+    }
 
 
 
@@ -321,31 +380,31 @@ img {
 
 
 
-/* ******** Reservation section ************************************************ */
-legend {
+    /* ******** Reservation section ************************************************ */
+    legend {
         color: white;
         font-size: 1.25rem;
         font-weight: 700;
         padding-left: 10px;
-}
-#reservation {
+    }
+    #reservation {
         background-color: rgba(129, 77, 178, 0.75);
-}
-#reservation td{
+    }
+    #reservation td{
 
         color: white;
         width: 300px;
         /*border: 2px solid #fff; */
         padding: 7px 5px;
-}
-.two-hundred td{
+    }
+    .two-hundred td{
         width: 150px;
-}
-label {
-    padding-left: 10px;
-}
+    }
+    label {
+        padding-left: 10px;
+    }
 
-.buttons {
+    .buttons {
         margin-left: 50px;
         padding: 12.5px 10px;
         border: 2px solid #fff;
@@ -355,7 +414,7 @@ label {
         font-size: 1.125rem;
         color: purple;
         text-shadow: 1px 1px #fff;
-}
+    }
 
 
 
@@ -363,26 +422,26 @@ label {
 
 
 
-/* ******** Footer section ****************************************************** */
+    /* ******** Footer section ****************************************************** */
 
-.cell h1, h2, h3, h4{
+    .cell h1, h2, h3, h4{
         color: white;
         font-family: falla;
         text-align: center;
-}
-.cell a {
+    }
+    .cell a {
         color: white;
         text-decoration: none;
-}
-.spacing-bottom {
+    }
+    .spacing-bottom {
         padding-bottom: 20px;
-}
-.cell a.space-left {
+    }
+    .cell a.space-left {
         padding-left: 15px;
-}
-.cell a.space-right {
+    }
+    .cell a.space-right {
         padding-right: 15px;
-}
+    }
 
 } /*end of media query for larger screens*/
 
