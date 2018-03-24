@@ -280,7 +280,7 @@
                                             you can print the tickets yourself</p>
                                     </td>
                                     <td>
-                                        <p>A delivery fee of $2.75 will be added for mailing tickets</p>
+                                        <p>A delivery fee of $5.95 will be added for mailing tickets</p>
                                     </td>
                                 </tr>
                                 <tr>
