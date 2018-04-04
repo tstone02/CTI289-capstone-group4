@@ -12,3 +12,7 @@ I added the instructions and navigation links to the main section.<br>
 Also added some classes to the css file.<br>
 Added titles to the reservation and seats section<br>
 Edited the chart in seating area to include rows & seats available per row.<br>
+uploaded a zip file with the programming elements I have worked on so far.<br>
+display number of available seats per row <br>
+add  customer information and reservation info to the db using the form.<br>
+
