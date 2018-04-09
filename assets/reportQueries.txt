@@ -1,0 +1,18 @@
+//total seats available per section
+
+SELECT count(*) FROM APP.SEATS where seatAvailability = true group by categoryId;
+
+
+//total tickets sold per section
+
+SELECT count(*) FROM APP.SEATS where seatAvailability = false group by categoryId;
+
+
+//total sales per section
+
+SELECT sum(seatprice) FROM APP.SEATS where seatAvailability = false group by categoryId;
+
+
+//total sales (including delivery and service fees)
+
+SELECT sum(totalprice) FROM APP.sales;
