@@ -182,8 +182,11 @@ body {
         width: 1600px;
         height: auto;
         margin: auto;
-        
-        background-image: url(../images/colorfulMusic.jpg)
+       background-image: url(../images/colorfulMusic.jpg);
+    }
+    .container li {
+        color: #fff;
+        font-size: 1.25rem;
     }
     .spacing {
         padding-top: 20px;
@@ -218,6 +221,25 @@ body {
         font-size: 1.75rem;
         padding-bottom: 10px;
     }
+    .instructions a {
+        text-decoration: none;
+        color: #fff;
+        font-family: falla;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+     .instructions a:hover {
+        background-color: #814db2;
+        text-shadow: 1px 1px #fbb311;
+    }
+    .left-title {
+        text-align: left;
+        font-family: boogie;
+        font-size: 3rem;
+        color: #fff;
+        padding-bottom: 10px;
+        text-shadow: 1px 1px #fbb311;
+    }
 
     .center-title {
         text-align: center;
@@ -228,7 +250,7 @@ body {
         text-shadow: 1px 1px #fbb311;
     }
     .nav-links {
-        margin-bottom: 150px;
+        margin-bottom: 60px;
     }
     .nav-links li{
         text-align: center;
@@ -355,6 +377,17 @@ body {
         padding: 5px;
 
     }
+    h4{
+        font-size: 1.25rem;
+        color: #fff;
+        text-shadow: 1px 1px #fbb311;
+        padding: 10px;
+    }
+    h4 a {
+        text-decoration: none;
+         color: #fff;
+        text-shadow: 1px 1px #fbb311;
+    }
     .a-section {
         background-color: rgba(8, 211, 244, .75);
         border: 2px solid #fff;
@@ -370,6 +403,13 @@ body {
         border: 2px solid #fff;
         border-radius: 5px;
 
+    }
+    section {
+        color: #fff;
+        margin: auto;
+        font-weight: bold;
+        font-size: 1.125rem;
+        background-color: rgba(28, 13, 42, 0.75)
     }
 
 
@@ -405,7 +445,7 @@ body {
     }
 
     .buttons {
-        margin-left: 50px;
+       
         padding: 12.5px 10px;
         border: 2px solid #fff;
         border-radius: 5px;
@@ -441,6 +481,9 @@ body {
     }
     .cell a.space-right {
         padding-right: 15px;
+    }
+    #reports {
+        background-color: rgba(28, 13, 42, .65);
     }
 
 } /*end of media query for larger screens*/
