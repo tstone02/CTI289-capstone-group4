@@ -58,14 +58,9 @@
                             Integer SEATSRESERVED = Integer.parseInt(SEATS);
                             String PRINTMETHOD = request.getParameter("TICKETPRINTMETHOD");
                             String ONLINE = request.getParameter("ONLINEPURCHASE");
+                            String SEATAVAILABILITY = request.getParameter("SEATAVAILABILITY");
                             double TOTALPRICE = 0.0;
-                            /*
-                            String SEAT = request.getParameter("SEATID");
-                            Integer SEATID = Integer.parseInt(SEAT);
-                             */
-                            String TOBESHIPPED = request.getParameter("SHIPPED");
                             double SEATPRICE = 0;
-                            //boolean SHIPPED = true;
                             String ROWID = request.getParameter("ROWID");
                             if (ROWID.equalsIgnoreCase("A")) {
                                 SEATPRICE = 50;
@@ -170,6 +165,7 @@
                                 bStatement.executeUpdate();
 
                                 cStatement.executeUpdate();
+                                
 
                                 for (int i = 0; i < SEATSRESERVED; i++) {
                                     StringBuilder dBuilder = new StringBuilder();
@@ -184,39 +180,39 @@
                                     ResultSet ten = dStatement.executeQuery();
 
                                     while (ten.next()) {
+                                       
+                                            StringBuilder eBuilder = new StringBuilder();
+                                            eBuilder.append("UPDATE SEATS SET SEATAVAILABILITY = ?,  RESERVATIONID = ? WHERE SEATID = ?");
+                                            String ePreparedQuery = eBuilder.toString();
 
-                                        StringBuilder eBuilder = new StringBuilder();
-                                        eBuilder.append("UPDATE SEATS SET SEATAVAILABILITY = ?,  RESERVATIONID = ? WHERE SEATID = ?");
-                                        String ePreparedQuery = eBuilder.toString();
+                                            PreparedStatement eStatement = aConnection.prepareStatement(ePreparedQuery);
 
-                                        PreparedStatement eStatement = aConnection.prepareStatement(ePreparedQuery);
+                                            eStatement.setInt(2, RESERVATIONID);
+                                            eStatement.setInt(3, ten.getInt("SEATID"));
 
-                                        eStatement.setBoolean(1, false);
-                                        eStatement.setInt(2, RESERVATIONID);
-                                        eStatement.setInt(3, ten.getInt("SEATID"));
+                                            eStatement.executeUpdate();
 
-                                        eStatement.executeUpdate();
-                                    }
-
-                                }
-
-                                aConnection.commit();
+                                    
+                                }//end while loop
+                            }//end for loop
+                            aConnection.commit();
+                        } //end try
+                            catch (Exception e) {
+                            e.printStackTrace();
+                            try {
+                                aConnection.rollback();
+                            } catch (Exception re) {
+                                re.printStackTrace();
+                            }
+                        } finally {
+                            // try to close the connection...
+                            try {
+                                // close the connection...
+                                aConnection.close();
                             } catch (Exception e) {
                                 e.printStackTrace();
-                                try {
-                                    aConnection.rollback();
-                                } catch (Exception re) {
-                                    re.printStackTrace();
-                                }
-                            } finally {
-                                // try to close the connection...
-                                try {
-                                    // close the connection...
-                                    aConnection.close();
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
                             }
+                        }
                     %>
                     <h1 class="left-title">Confirmation:</h1>
                     <br>
@@ -231,7 +227,7 @@
 
                     <h1>You have Reserved: <%=request.getParameter("SEATSRESERVED")%> seats.</h1>
 
-                    <h1>Total: $<%= String.format("%.2f", TOTALPRICE) %></h1>
+                    <h1>Total: $<%= String.format("%.2f", TOTALPRICE)%></h1>
                     <%
                         }
                     %> 
@@ -254,7 +250,7 @@
                         <li><a href="index.jsp#top">Home</a></li>
                         <li><a href="index.jsp#seats">Seating Chart</a></li>
                         <li><a href="index.jsp#reservation">Reservation Form</a></li>
-                        <li><a href="index.jsp#reports">Reports</a></li>
+                        <li><a href="report.jsp">Reports</a></li>
                     </ul>
                 </div>
             </div>	
@@ -263,7 +259,7 @@
             <h1 class="center-title">Thank you and enjoy the concert.</h1>
             <br>
             <br>
-          
+
             <a href="index.jsp"><h1 class="center-title">Return to Jazzervations site</h1></a>
 
             <!-- Start of Footer Section	

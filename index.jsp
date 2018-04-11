@@ -32,13 +32,13 @@
                 <div class="instructions">
                     <h1 class="big-display l-pad">How to Use this site:</h1>
                     <dl>
-                        <dt class="l-pad">View the Seating Chart.</dt>
+                        <dt class="l-pad"><a href="#seats">View the Seating Chart.</a></dt>
                         <dd>You can see the location and pricing for each section.</dd> <dd>You will be able to see what seats are still available in each row.</dd>
                         <dt class="l-pad">Decide where you want to sit.</dt>
                         <dd>Choose the section and row you want.</dd>
                         <dd>You may only select 1 row per reservation.</dd>
                         <dd>Verify that the row has enough seats for your entire party.</dd>
-                        <dt class="l-pad">Make your reservation.</dt>
+                        <dt class="l-pad"><a href="#reservation">Make your reservation.</a></dt>
                         <dd>Fill out the reservation form.</dd>
                         <dt class="l-pad">Review and Submit your reservation.</dt>
                         <dd>Be sure the information you entered is correct.</dd>
@@ -57,7 +57,7 @@
                         <li><a href="#top">Home</a></li>
                         <li><a href="#seats">Seating Chart</a></li>
                         <li><a href="#reservation">Reservation Form</a></li>
-                        <li><a href="#reports">Reports</a></li>
+                        <li><a href="report.jsp">Reports</a></li>
                     </ul>
                 </div>
             </div>	
@@ -67,19 +67,24 @@
             <!-- Start of Seating Section	
 ********************************************************************************************************************************************* 		 -->
             <h1 class="center-title" id="seats">Seating Chart</h1>
+            <div class="row">
+                <div></div>
+                <div>
+                    <section>
+                        
+                        <p>Seat Availability and Pricing information is on the left.</p>
+                        <p>If a row is not displayed, all seats in that row are reserved.</p>
+
+                    </section>
+                </div>
+                <div></div>
+            </div>
             <div class="row spacing">
+
                 <div class="sections">
                     <%
                         Connection con = null;
-                        ResultSet one = null;
-                        ResultSet two = null;
-                        ResultSet three = null;
-                        ResultSet four = null;
-                        ResultSet five = null;
-                        ResultSet six = null;
-                        ResultSet seven = null;
-                        ResultSet eight = null;
-                        ResultSet nine = null;
+                        ResultSet rs = null;
 
                         boolean isResultSetEmpty = true;
                         PreparedStatement preparedStatement = null;
@@ -103,19 +108,19 @@
 
                                                 con = DriverManager.getConnection(url);
 
-                                                String queryone = "SELECT count(*) as total FROM seats Where rowid = 'A'and SEATAVAILABILITY = true";
+                                                String query = "SELECT ROWID, count(*) as total FROM seats Where SEATAVAILABILITY = true and CATEGORYID = 1 GROUP BY ROWID";
                                                 //Send query to the database and store result in ResultSet
 
-                                                preparedStatement = con.prepareStatement(queryone);
+                                                preparedStatement = con.prepareStatement(query);
 
-                                                one = preparedStatement.executeQuery();
+                                                rs = preparedStatement.executeQuery();
 
-                                                while (one.next()) {
+                                                while (rs.next()) {
                                                     //If we enter to the while, the ResultSet wasn't empty
                                                     isResultSetEmpty = false;
 
                                         %>
-                                        <li>Row A: <span id="1a"><%=one.getInt("total")%></span></li>
+                                        <li>Row <%=rs.getString("ROWID")%> <span><%=rs.getInt("total")%></span></li>
 
                                         <%
 
@@ -123,7 +128,7 @@
 
                                             if (isResultSetEmpty) {
                                         %>
-                                        <li>The database is Empty</li>
+                                        <li>The Section is full</li>
                                             <%
                                                     }
                                                 } catch (Exception e) {
@@ -134,83 +139,7 @@
                                                         re.printStackTrace();
                                                     }
                                                 }
-                                                try {
-
-                                                    Class.forName(driver).newInstance();
-
-                                                    con = DriverManager.getConnection(url);
-
-                                                    String querytwo = "SELECT count(*) as total FROM seats Where rowid = 'B' and seatAvailability = true";
-                                                    //Send query to the database and store result in ResultSet
-
-                                                    preparedStatement = con.prepareStatement(querytwo);
-
-                                                    two = preparedStatement.executeQuery();
-
-                                                    while (two.next()) {
-                                                        //If we enter to the while, the ResultSet wasn't empty
-                                                        isResultSetEmpty = false;
-
-                                            %>
-
-                                        <li>Row B: <span id="1b"><%=two.getInt("total")%></span></li>
-                                            <%
-
-                                                }
-
-                                                if (isResultSetEmpty) {
-                                            %>
-                                        <li>The database is Empty</li>
-                                            <%
-                                                    }
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    try {
-                                                        con.rollback();
-                                                    } catch (Exception re) {
-                                                        re.printStackTrace();
-                                                    }
-                                                }
-                                                try {
-
-                                                    Class.forName(driver).newInstance();
-
-                                                    con = DriverManager.getConnection(url);
-
-                                                    String querythree = "SELECT count(*) as total FROM seats Where rowid = 'C' and seatAvailability = true";
-                                                    //Send query to the database and store result in ResultSet
-
-                                                    preparedStatement = con.prepareStatement(querythree);
-
-                                                    three = preparedStatement.executeQuery();
-
-                                                    while (three.next()) {
-                                                        //If we enter to the while, the ResultSet wasn't empty
-                                                        isResultSetEmpty = false;
-
-                                            %>
-
-                                        <li>Row C: <span id="1c"><%=three.getInt("total")%></span></li>
-
-                                        <%
-
-                                            }
-
-                                            if (isResultSetEmpty) {
-                                        %>
-                                        <li>The database is Empty</li>
-                                            <%
-                                                    }
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    try {
-                                                        con.rollback();
-                                                    } catch (Exception re) {
-                                                        re.printStackTrace();
-                                                    }
-                                                }
-                                            %>
-
+                                            %>                                     
 
                                     </ul>
 
@@ -237,19 +166,19 @@
 
                                                 con = DriverManager.getConnection(url);
 
-                                                String queryfour = "SELECT count(*) as total FROM seats Where rowid = 'D' and seatAvailability = true";
+                                                String query = "SELECT ROWID,  count(*) as total FROM seats Where seatAvailability = true AND CATEGORYID = 2 GROUP BY ROWID";
                                                 //Send query to the database and store result in ResultSet
 
-                                                preparedStatement = con.prepareStatement(queryfour);
+                                                preparedStatement = con.prepareStatement(query);
 
-                                                four = preparedStatement.executeQuery();
+                                                rs = preparedStatement.executeQuery();
 
-                                                while (four.next()) {
+                                                while (rs.next()) {
                                                     //If we enter to the while, the ResultSet wasn't empty
                                                     isResultSetEmpty = false;
 
                                         %>
-                                        <li>Row D: <span id="2d"><%=four.getInt("total")%></span></li>
+                                        <li>Row <%=rs.getString("ROWID")%> <span><%=rs.getInt("total")%></span></li>
 
                                         <%
 
@@ -257,7 +186,7 @@
 
                                             if (isResultSetEmpty) {
                                         %>
-                                        <li>The database is Empty</li>
+                                        <li>The section is full</li>
                                             <%
                                                     }
                                                 } catch (Exception e) {
@@ -268,81 +197,7 @@
                                                         re.printStackTrace();
                                                     }
                                                 }
-                                                try {
 
-                                                    Class.forName(driver).newInstance();
-
-                                                    con = DriverManager.getConnection(url);
-
-                                                    String queryfive = "SELECT count(*) as total FROM seats Where rowid = 'E' and seatAvailability = true";
-                                                    //Send query to the database and store result in ResultSet
-
-                                                    preparedStatement = con.prepareStatement(queryfive);
-
-                                                    five = preparedStatement.executeQuery();
-
-                                                    while (five.next()) {
-                                                        //If we enter to the while, the ResultSet wasn't empty
-                                                        isResultSetEmpty = false;
-
-                                            %>
-
-                                        <li>Row E: <span id="2e"><%=five.getInt("total")%></span></li>
-                                            <%
-
-                                                }
-
-                                                if (isResultSetEmpty) {
-                                            %>
-                                        <li>The database is Empty</li>
-                                            <%
-                                                    }
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    try {
-                                                        con.rollback();
-                                                    } catch (Exception re) {
-                                                        re.printStackTrace();
-                                                    }
-                                                }
-                                                try {
-
-                                                    Class.forName(driver).newInstance();
-
-                                                    con = DriverManager.getConnection(url);
-
-                                                    String querysix = "SELECT count(*) as total FROM seats Where rowid = 'F' and seatAvailability = true";
-                                                    //Send query to the database and store result in ResultSet
-
-                                                    preparedStatement = con.prepareStatement(querysix);
-
-                                                    six = preparedStatement.executeQuery();
-
-                                                    while (six.next()) {
-                                                        //If we enter to the while, the ResultSet wasn't empty
-                                                        isResultSetEmpty = false;
-
-                                            %>
-
-                                        <li>Row F: <span id="2f"><%=six.getInt("total")%></span></li>
-
-                                        <%
-
-                                            }
-
-                                            if (isResultSetEmpty) {
-                                        %>
-                                        <li>The database is Empty</li>
-                                            <%
-                                                    }
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    try {
-                                                        con.rollback();
-                                                    } catch (Exception re) {
-                                                        re.printStackTrace();
-                                                    }
-                                                }
                                             %>
 
 
@@ -360,26 +215,25 @@
                                 </div>
                                 <div>
                                     <ul> 
-                                        <%
-                                            try {
+                                        <%                                            try {
 
                                                 Class.forName(driver).newInstance();
 
                                                 con = DriverManager.getConnection(url);
 
-                                                String queryseven = "SELECT count(*) as total FROM seats Where rowid = 'G' and seatAvailability = true";
+                                                String query = "SELECT ROWID, count(*) as total FROM seats Where CATEGORYID = 3 and seatAvailability = true group by ROWID";
                                                 //Send query to the database and store result in ResultSet
 
-                                                preparedStatement = con.prepareStatement(queryseven);
+                                                preparedStatement = con.prepareStatement(query);
 
-                                                seven = preparedStatement.executeQuery();
+                                                rs = preparedStatement.executeQuery();
 
-                                                while (seven.next()) {
+                                                while (rs.next()) {
                                                     //If we enter to the while, the ResultSet wasn't empty
                                                     isResultSetEmpty = false;
 
                                         %>
-                                        <li>Row G: <span id="3g"><%=seven.getInt("total")%></span></li>
+                                        <li>Row <%=rs.getString("ROWID")%> <span><%=rs.getInt("total")%></span></li>
 
                                         <%
 
@@ -387,82 +241,7 @@
 
                                             if (isResultSetEmpty) {
                                         %>
-                                        <li>The database is Empty</li>
-                                            <%
-                                                    }
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    try {
-                                                        con.rollback();
-                                                    } catch (Exception re) {
-                                                        re.printStackTrace();
-                                                    }
-                                                }
-                                                try {
-
-                                                    Class.forName(driver).newInstance();
-
-                                                    con = DriverManager.getConnection(url);
-
-                                                    String queryeight = "SELECT count(*) as total FROM seats Where rowid = 'H' and seatAvailability = true";
-                                                    //Send query to the database and store result in ResultSet
-
-                                                    preparedStatement = con.prepareStatement(queryeight);
-
-                                                    eight = preparedStatement.executeQuery();
-
-                                                    while (eight.next()) {
-                                                        //If we enter to the while, the ResultSet wasn't empty
-                                                        isResultSetEmpty = false;
-
-                                            %>
-
-                                        <li>Row H: <span id="3h"><%=eight.getInt("total")%></span></li>
-                                            <%
-
-                                                }
-
-                                                if (isResultSetEmpty) {
-                                            %>
-                                        <li>The database is Empty</li>
-                                            <%
-                                                    }
-                                                } catch (Exception e) {
-                                                    e.printStackTrace();
-                                                    try {
-                                                        con.rollback();
-                                                    } catch (Exception re) {
-                                                        re.printStackTrace();
-                                                    }
-                                                }
-                                                try {
-
-                                                    Class.forName(driver).newInstance();
-
-                                                    con = DriverManager.getConnection(url);
-
-                                                    String querynine = "SELECT count(*) as total FROM seats Where rowid = 'I' and seatAvailability = true";
-                                                    //Send query to the database and store result in ResultSet
-
-                                                    preparedStatement = con.prepareStatement(querynine);
-
-                                                    nine = preparedStatement.executeQuery();
-
-                                                    while (nine.next()) {
-                                                        //If we enter to the while, the ResultSet wasn't empty
-                                                        isResultSetEmpty = false;
-
-                                            %>
-
-                                        <li>Row I: <span id="3i"><%=nine.getInt("total")%></span></li>
-
-                                        <%
-
-                                            }
-
-                                            if (isResultSetEmpty) {
-                                        %>
-                                        <li>The database is Empty</li>
+                                        <li>The section is full</li>
                                             <%
                                                     }
                                                 } catch (Exception e) {
@@ -532,7 +311,7 @@
 
             <!-- End of Seating Section	
 ********************************************************************************************************************************************* 		 -->	
-
+            <h4><a href="#top">Return to Top</a></h4>
 
 
             <!-- Start of Contact Section	
@@ -552,7 +331,7 @@
                                         <label for="CUSTOMERFIRSTNAME">First Name:</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="CUSTOMERFIRSTNAME" id="CUSTOMERFIRSTNAME" placeholder="Enter your first name">
+                                        <input type="text" name="CUSTOMERFIRSTNAME" id="CUSTOMERFIRSTNAME" pattern="[a-zA-Z0-9]+" title = "Name can only include letters and numbers" placeholder="Enter your first name" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -560,7 +339,7 @@
                                         <label for="CUSTOMERLASTNAME">Last Name:</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="CUSTOMERLASTNAME" id="CUSTOMERLASTNAME" placeholder="Enter your last name">
+                                        <input type="text" name="CUSTOMERLASTNAME" id="CUSTOMERLASTNAME" pattern="[a-zA-Z0-9]+"  title = "Name can only include letters and numbers" placeholder="Enter your last name" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -568,7 +347,7 @@
                                         <label for="ADDRESS">Street Address:</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="ADDRESS" id="ADDRESS" placeholder="Enter your street address">
+                                        <input type="text" name="ADDRESS" id="ADDRESS" placeholder="Enter your street address" required>
                                     </td>
                                 </tr>
 
@@ -577,7 +356,7 @@
                                         <label for="CITY">City:</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="CITY" id="CITY" placeholder="City">
+                                        <input type="text" name="CITY" id="CITY" placeholder="City" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -585,7 +364,7 @@
                                         <label for="STATE">State:</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="STATE" id="STATE" placeholder="State">
+                                        <input type="text" name="STATE" id="STATE" PATTERN="[A-Z]{2}" title="Please use 2 letter state code (i.e. NC)" placeholder="State" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -593,7 +372,7 @@
                                         <label for="ZIP">ZIP Code:</label>
                                     </td>
                                     <td>
-                                        <input type="text" name="ZIP" id="ZIP" placeholder="ZIP Code">
+                                        <input type="text" name="ZIP" id="ZIP" pattern = "(\d{5}([\-]\d{4})?)" title="Use 5 digit zip code or ZIP plus 4" placeholder="ZIP Code" required>
                                     </td>
                                 </tr>
 
@@ -602,7 +381,7 @@
                                         <label for="EMAILADDRESS">Email Address:</label>
                                     </td>
                                     <td>
-                                        <input type="email" name="EMAILADDRESS" id="EMAILADDRESS" placeholder="Email Address">
+                                        <input type="email" name="EMAILADDRESS" id="EMAILADDRESS" placeholder="Email Address" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -610,7 +389,7 @@
                                         <label for="PHONENUMBER">Telephone:</label>
                                     </td>
                                     <td>
-                                        <input type="tel" name="PHONENUMBER" id="PHONENUMBER" placeholder="Telephone Number">
+                                        <input type="tel" name="PHONENUMBER" id="PHONENUMBER" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title = " Phone Number in the format of: 123-456-7890" placeholder="Telephone Number" required>
                                     </td>
                                 </tr>
                             </table>
@@ -677,7 +456,7 @@
 
                                     </td>
                                     <td>
-                                        <input type="number" name="SEATSRESERVED" id="SEATSRESERVED" >
+                                        <input type="number" name="SEATSRESERVED" id="SEATSRESERVED" required max="25">
 
                                     </td>
                                 </tr>
@@ -686,7 +465,7 @@
                                         What Row do you want to sit in?
                                     </td>
                                     <td>
-                                        <select name="ROWID">
+                                        <select name="ROWID" required>
                                             <option value="A">Section 1, Row A</option>
                                             <option value="B">Section 1, Row B</option>
                                             <option value="C">Section 1, Row C</option>
@@ -719,11 +498,10 @@
 
             </form>
 
-
+            <h4><a href="#top">Return to Top</a></h4>
 
             <!-- End of Contact Section	
 ********************************************************************************************************************************************* 		 -->
-            <h1 class="center-title">Reports</h1>
 
             <!-- Start of Footer Section	
 ********************************************************************************************************************************************* 		 -->
